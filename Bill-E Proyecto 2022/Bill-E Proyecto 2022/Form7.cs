@@ -16,5 +16,12 @@ namespace Bill_E_Proyecto_2022
         {
             InitializeComponent();
         }
+
+        private void BtnVolver4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form5 Laberinto = new Form5();
+            Laberinto.Show();
+        }
     }
 }

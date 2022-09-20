@@ -9,3 +9,9 @@ C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Deb
 C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.CoreCompileInputs.cache
 C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.exe
 C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form3.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form4.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form5.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form6.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form7.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form8.resources

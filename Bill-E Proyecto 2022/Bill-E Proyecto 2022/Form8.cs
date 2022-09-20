@@ -16,5 +16,12 @@ namespace Bill_E_Proyecto_2022
         {
             InitializeComponent();
         }
+
+        private void BtnVolver6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form6 Contrarreloj = new Form6();
+            Contrarreloj.Show();
+        }
     }
 }

@@ -16,5 +16,20 @@ namespace Bill_E_Proyecto_2022
         {
             InitializeComponent();
         }
+
+        private void BtnIniciar2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form8 ContrarrelojJuego = new Form8();
+            ContrarrelojJuego.Show();
+        }
+
+        private void BtnVolver5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 Juegos = new Form4();
+            Juegos.Show();
+
+        }
     }
 }

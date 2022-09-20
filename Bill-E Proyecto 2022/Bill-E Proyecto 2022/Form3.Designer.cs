@@ -37,12 +37,15 @@
             this.btnVolver.BackColor = System.Drawing.Color.Transparent;
             this.btnVolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolver.BackgroundImage")));
             this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.ForeColor = System.Drawing.Color.Transparent;
             this.btnVolver.Location = new System.Drawing.Point(706, 371);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(82, 67);
             this.btnVolver.TabIndex = 0;
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
             // Form3
             // 

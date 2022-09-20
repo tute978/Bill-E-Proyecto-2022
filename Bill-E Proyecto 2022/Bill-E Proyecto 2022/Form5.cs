@@ -16,5 +16,19 @@ namespace Bill_E_Proyecto_2022
         {
             InitializeComponent();
         }
+
+        private void BtnIniciar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form7 JuegoLaberinto = new Form7();
+            JuegoLaberinto.Show();
+        }
+
+        private void BtnVolver3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 Juegos = new Form4();
+            Juegos.Show();
+        }
     }
 }
