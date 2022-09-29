@@ -12,9 +12,13 @@ namespace Bill_E_Proyecto_2022
 {
     public partial class Form2 : Form
     {
+        GeneralButton jugar;
+
         public Form2()
         {
             InitializeComponent();
+
+            jugar = new GeneralButton(btnJugar);
         }
 
         private void BtnJugar_Click(object sender, EventArgs e)
@@ -35,6 +39,16 @@ namespace Bill_E_Proyecto_2022
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnJugar_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnJugar_MouseLeave(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -40,6 +40,8 @@
             this.btnJugar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnJugar.BackgroundImage")));
             this.btnJugar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnJugar.FlatAppearance.BorderSize = 0;
+            this.btnJugar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnJugar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJugar.ForeColor = System.Drawing.Color.Transparent;
             this.btnJugar.Location = new System.Drawing.Point(39, 142);
@@ -48,6 +50,8 @@
             this.btnJugar.TabIndex = 0;
             this.btnJugar.UseVisualStyleBackColor = false;
             this.btnJugar.Click += new System.EventHandler(this.BtnJugar_Click);
+            this.btnJugar.MouseEnter += new System.EventHandler(this.BtnJugar_MouseEnter);
+            this.btnJugar.MouseLeave += new System.EventHandler(this.BtnJugar_MouseLeave);
             // 
             // btnManejar
             // 
@@ -55,6 +59,8 @@
             this.btnManejar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManejar.BackgroundImage")));
             this.btnManejar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnManejar.FlatAppearance.BorderSize = 0;
+            this.btnManejar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnManejar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnManejar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManejar.Location = new System.Drawing.Point(605, 142);
             this.btnManejar.Name = "btnManejar";
@@ -62,6 +68,8 @@
             this.btnManejar.TabIndex = 1;
             this.btnManejar.UseVisualStyleBackColor = false;
             this.btnManejar.Click += new System.EventHandler(this.BtnManejar_Click);
+            this.btnManejar.MouseEnter += new System.EventHandler(this.BtnJugar_MouseEnter);
+            this.btnManejar.MouseLeave += new System.EventHandler(this.BtnJugar_MouseLeave);
             // 
             // btnSalir
             // 
