@@ -12,16 +12,28 @@ namespace Bill_E_Proyecto_2022
 {
     public partial class Form8 : Form
     {
+        GeneralButton volver;
         public Form8()
         {
             InitializeComponent();
+            volver = new GeneralButton(btnVoler2);
         }
 
-        private void BtnVolver6_Click(object sender, EventArgs e)
+        private void BtnVoler2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form6 Contrarreloj = new Form6();
             Contrarreloj.Show();
+        }
+
+        private void BtnVolver_MouseEnter(object sender, EventArgs e)
+        {
+            volver.setSize(4);
+        }
+
+        private void BtnVolver_MouseLeave(object sender, EventArgs e)
+        {
+            volver.setDefault();
         }
     }
 }

@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
-            this.btnVolver6 = new System.Windows.Forms.Button();
+            this.btnVoler2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnVolver6
+            // btnVoler2
             // 
-            this.btnVolver6.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolver6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolver6.BackgroundImage")));
-            this.btnVolver6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVolver6.FlatAppearance.BorderSize = 0;
-            this.btnVolver6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver6.Location = new System.Drawing.Point(706, 2);
-            this.btnVolver6.Name = "btnVolver6";
-            this.btnVolver6.Size = new System.Drawing.Size(82, 67);
-            this.btnVolver6.TabIndex = 0;
-            this.btnVolver6.UseVisualStyleBackColor = false;
-            this.btnVolver6.Click += new System.EventHandler(this.BtnVolver6_Click);
+            this.btnVoler2.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoler2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoler2.BackgroundImage")));
+            this.btnVoler2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoler2.FlatAppearance.BorderSize = 0;
+            this.btnVoler2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoler2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoler2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoler2.Location = new System.Drawing.Point(718, 5);
+            this.btnVoler2.Name = "btnVoler2";
+            this.btnVoler2.Size = new System.Drawing.Size(75, 67);
+            this.btnVoler2.TabIndex = 6;
+            this.btnVoler2.UseVisualStyleBackColor = false;
+            this.btnVoler2.Click += new System.EventHandler(this.BtnVoler2_Click);
+            this.btnVoler2.MouseEnter += new System.EventHandler(this.BtnVolver_MouseEnter);
+            this.btnVoler2.MouseLeave += new System.EventHandler(this.BtnVolver_MouseLeave);
             // 
             // Form8
             // 
@@ -53,7 +57,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnVolver6);
+            this.Controls.Add(this.btnVoler2);
             this.DoubleBuffered = true;
             this.Name = "Form8";
             this.Text = "Form8";
@@ -63,6 +67,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnVolver6;
+        private System.Windows.Forms.Button btnVoler2;
     }
 }

@@ -13,12 +13,14 @@ namespace Bill_E_Proyecto_2022
     public partial class Form2 : Form
     {
         GeneralButton jugar;
+        GeneralButton manejar;
 
         public Form2()
         {
             InitializeComponent();
 
             jugar = new GeneralButton(btnJugar);
+            manejar = new GeneralButton(btnManejar);
         }
 
         private void BtnJugar_Click(object sender, EventArgs e)
@@ -43,12 +45,26 @@ namespace Bill_E_Proyecto_2022
 
         private void BtnJugar_MouseEnter(object sender, EventArgs e)
         {
-            jugar.
+            if((Button) sender == btnJugar)
+            {
+                jugar.setSize(4);
+            }
+            else if ((Button)sender == btnManejar)
+            {
+                manejar.setSize(4);
+            }
         }
 
         private void BtnJugar_MouseLeave(object sender, EventArgs e)
         {
-            
+            if((Button)sender == btnJugar)
+            {
+                jugar.setDefault();
+            }
+            else if ((Button)sender == btnManejar)
+            {
+                manejar.setDefault();
+            }
         }
     }
 }

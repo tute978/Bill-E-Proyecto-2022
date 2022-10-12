@@ -12,9 +12,13 @@ namespace Bill_E_Proyecto_2022
 {
     public partial class Form6 : Form
     {
+        GeneralButton volver;
+        GeneralButton iniciar;
         public Form6()
         {
             InitializeComponent();
+            volver = new GeneralButton(btnVoler2);
+            iniciar = new GeneralButton(btnIniciar2);
         }
 
         private void BtnIniciar2_Click(object sender, EventArgs e)
@@ -24,12 +28,35 @@ namespace Bill_E_Proyecto_2022
             ContrarrelojJuego.Show();
         }
 
-        private void BtnVolver5_Click(object sender, EventArgs e)
+        private void BtnVolver_MouseEnter(object sender, EventArgs e)
+        {
+            if((Button) sender == btnVoler2)
+            {
+                volver.setSize(4);
+            }
+            else if((Button)sender == btnIniciar2)
+            {
+                iniciar.setSize(4);
+            }
+        }
+
+        private void BtnVolver_MouseLeave(object sender, EventArgs e)
+        {
+            if ((Button)sender == btnVoler2)
+            {
+                volver.setDefault();
+            }
+            else if ((Button)sender == btnIniciar2)
+            {
+                iniciar.setDefault();
+            }
+        }
+
+        private void BtnVoler2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form4 Juegos = new Form4();
             Juegos.Show();
-
         }
     }
 }

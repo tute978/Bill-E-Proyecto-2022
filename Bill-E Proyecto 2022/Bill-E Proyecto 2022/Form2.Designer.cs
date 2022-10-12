@@ -44,7 +44,7 @@
             this.btnJugar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJugar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnJugar.Location = new System.Drawing.Point(39, 142);
+            this.btnJugar.Location = new System.Drawing.Point(43, 142);
             this.btnJugar.Name = "btnJugar";
             this.btnJugar.Size = new System.Drawing.Size(156, 65);
             this.btnJugar.TabIndex = 0;

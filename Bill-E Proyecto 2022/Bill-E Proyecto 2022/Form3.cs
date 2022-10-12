@@ -12,9 +12,11 @@ namespace Bill_E_Proyecto_2022
 {
     public partial class Form3 : Form
     {
+        GeneralButton volver;
         public Form3()
         {
             InitializeComponent();
+            volver = new GeneralButton(btnVolver);
         }
 
         private void BtnVolver_Click(object sender, EventArgs e)
@@ -22,6 +24,16 @@ namespace Bill_E_Proyecto_2022
             this.Hide();
             Form2 Menu = new Form2();
             Menu.Show();
+        }
+
+        private void BtnVolver_MouseEnter(object sender, EventArgs e)
+        {
+            volver.setSize(4);
+        }
+
+        private void BtnVolver_MouseLeave(object sender, EventArgs e)
+        {
+            volver.setDefault();
         }
     }
 }

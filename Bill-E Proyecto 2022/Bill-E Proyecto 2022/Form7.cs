@@ -12,16 +12,28 @@ namespace Bill_E_Proyecto_2022
 {
     public partial class Form7 : Form
     {
+        GeneralButton volver;
         public Form7()
         {
             InitializeComponent();
+            volver = new GeneralButton(btnVoler2);
         }
 
-        private void BtnVolver4_Click(object sender, EventArgs e)
+        private void BtnVoler2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form5 Laberinto = new Form5();
             Laberinto.Show();
+        }
+
+        private void BtnVolver_MouseEnter(object sender, EventArgs e)
+        {
+            volver.setSize(4);
+        }
+
+        private void BtnVolver_MouseLeave(object sender, EventArgs e)
+        {
+            volver.setDefault();
         }
     }
 }

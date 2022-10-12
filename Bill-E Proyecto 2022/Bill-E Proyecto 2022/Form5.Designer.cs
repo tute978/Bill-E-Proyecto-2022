@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.btnVolver3 = new System.Windows.Forms.Button();
+            this.btnVoler2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIniciar
@@ -39,6 +39,8 @@
             this.btnIniciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIniciar.BackgroundImage")));
             this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIniciar.FlatAppearance.BorderSize = 0;
+            this.btnIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Location = new System.Drawing.Point(12, 374);
             this.btnIniciar.Name = "btnIniciar";
@@ -46,20 +48,26 @@
             this.btnIniciar.TabIndex = 0;
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.BtnIniciar_Click);
+            this.btnIniciar.MouseEnter += new System.EventHandler(this.BtnVolver_MouseEnter);
+            this.btnIniciar.MouseLeave += new System.EventHandler(this.BtnVolver_MouseLeave);
             // 
-            // btnVolver3
+            // btnVoler2
             // 
-            this.btnVolver3.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolver3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolver3.BackgroundImage")));
-            this.btnVolver3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVolver3.FlatAppearance.BorderSize = 0;
-            this.btnVolver3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver3.Location = new System.Drawing.Point(706, 12);
-            this.btnVolver3.Name = "btnVolver3";
-            this.btnVolver3.Size = new System.Drawing.Size(82, 67);
-            this.btnVolver3.TabIndex = 1;
-            this.btnVolver3.UseVisualStyleBackColor = false;
-            this.btnVolver3.Click += new System.EventHandler(this.BtnVolver3_Click);
+            this.btnVoler2.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoler2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoler2.BackgroundImage")));
+            this.btnVoler2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoler2.FlatAppearance.BorderSize = 0;
+            this.btnVoler2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoler2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoler2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoler2.Location = new System.Drawing.Point(719, 4);
+            this.btnVoler2.Name = "btnVoler2";
+            this.btnVoler2.Size = new System.Drawing.Size(75, 67);
+            this.btnVoler2.TabIndex = 3;
+            this.btnVoler2.UseVisualStyleBackColor = false;
+            this.btnVoler2.Click += new System.EventHandler(this.BtnVoler2_Click);
+            this.btnVoler2.MouseEnter += new System.EventHandler(this.BtnVolver_MouseEnter);
+            this.btnVoler2.MouseLeave += new System.EventHandler(this.BtnVolver_MouseLeave);
             // 
             // Form5
             // 
@@ -68,11 +76,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnVolver3);
+            this.Controls.Add(this.btnVoler2);
             this.Controls.Add(this.btnIniciar);
             this.DoubleBuffered = true;
             this.Name = "Form5";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);
 
         }
@@ -80,6 +89,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Button btnVolver3;
+        private System.Windows.Forms.Button btnVoler2;
     }
 }
