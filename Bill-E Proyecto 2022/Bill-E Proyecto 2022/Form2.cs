@@ -43,7 +43,7 @@ namespace Bill_E_Proyecto_2022
 
         private void BtnJugar_MouseEnter(object sender, EventArgs e)
         {
-            
+            jugar.
         }
 
         private void BtnJugar_MouseLeave(object sender, EventArgs e)
