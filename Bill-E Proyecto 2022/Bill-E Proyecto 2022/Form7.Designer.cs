@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.btnVoler2 = new System.Windows.Forms.Button();
+            this.PBLaberinto = new System.Windows.Forms.PictureBox();
+            this.moveTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.PBLaberinto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoler2
@@ -50,6 +54,23 @@
             this.btnVoler2.MouseEnter += new System.EventHandler(this.BtnVolver_MouseEnter);
             this.btnVoler2.MouseLeave += new System.EventHandler(this.BtnVolver_MouseLeave);
             // 
+            // PBLaberinto
+            // 
+            this.PBLaberinto.BackColor = System.Drawing.Color.Transparent;
+            this.PBLaberinto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBLaberinto.BackgroundImage")));
+            this.PBLaberinto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PBLaberinto.Location = new System.Drawing.Point(89, 217);
+            this.PBLaberinto.Name = "PBLaberinto";
+            this.PBLaberinto.Size = new System.Drawing.Size(50, 50);
+            this.PBLaberinto.TabIndex = 6;
+            this.PBLaberinto.TabStop = false;
+            // 
+            // moveTimer
+            // 
+            this.moveTimer.Enabled = true;
+            this.moveTimer.Interval = 1;
+            this.moveTimer.Tick += new System.EventHandler(this.EventoMoveTimer);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -57,10 +78,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PBLaberinto);
             this.Controls.Add(this.btnVoler2);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.Name = "Form7";
             this.Text = "Form7";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form7_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form7_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.PBLaberinto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,5 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnVoler2;
+        private System.Windows.Forms.PictureBox PBLaberinto;
+        private System.Windows.Forms.Timer moveTimer;
     }
 }
