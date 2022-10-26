@@ -24,7 +24,7 @@ namespace Bill_E_Proyecto_2022
         private void BtnIniciar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form7 JuegoLaberinto = new Form7();
+            yellowBall JuegoLaberinto = new yellowBall();
             JuegoLaberinto.Show();
         }
 

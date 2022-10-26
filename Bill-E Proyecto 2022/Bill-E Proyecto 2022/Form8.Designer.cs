@@ -33,15 +33,15 @@
             this.btnVoler2 = new System.Windows.Forms.Button();
             this.moveTimer = new System.Windows.Forms.Timer(this.components);
             this.Player = new System.Windows.Forms.PictureBox();
-            this.Red = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.redBall = new System.Windows.Forms.PictureBox();
+            this.yellowBall = new System.Windows.Forms.PictureBox();
+            this.blueBall = new System.Windows.Forms.PictureBox();
+            this.greenBall = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Red)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yellowBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenBall)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoler2
@@ -73,59 +73,59 @@
             this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Player.Location = new System.Drawing.Point(112, 131);
+            this.Player.Location = new System.Drawing.Point(117, 171);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(60, 60);
             this.Player.TabIndex = 7;
             this.Player.TabStop = false;
             // 
-            // Red
+            // redBall
             // 
-            this.Red.BackColor = System.Drawing.Color.Transparent;
-            this.Red.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Red.BackgroundImage")));
-            this.Red.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Red.Location = new System.Drawing.Point(235, 237);
-            this.Red.Name = "Red";
-            this.Red.Size = new System.Drawing.Size(35, 35);
-            this.Red.TabIndex = 8;
-            this.Red.TabStop = false;
-            this.Red.Tag = "redBall";
+            this.redBall.BackColor = System.Drawing.Color.Transparent;
+            this.redBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redBall.BackgroundImage")));
+            this.redBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.redBall.Location = new System.Drawing.Point(383, 286);
+            this.redBall.Name = "redBall";
+            this.redBall.Size = new System.Drawing.Size(35, 35);
+            this.redBall.TabIndex = 8;
+            this.redBall.TabStop = false;
+            this.redBall.Tag = "redBall";
             // 
-            // pictureBox1
+            // yellowBall
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(383, 208);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "redBall";
+            this.yellowBall.BackColor = System.Drawing.Color.Transparent;
+            this.yellowBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("yellowBall.BackgroundImage")));
+            this.yellowBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.yellowBall.Location = new System.Drawing.Point(436, 208);
+            this.yellowBall.Name = "yellowBall";
+            this.yellowBall.Size = new System.Drawing.Size(35, 35);
+            this.yellowBall.TabIndex = 10;
+            this.yellowBall.TabStop = false;
+            this.yellowBall.Tag = "yellowBall";
             // 
-            // pictureBox2
+            // blueBall
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(511, 131);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "redBall";
+            this.blueBall.BackColor = System.Drawing.Color.Transparent;
+            this.blueBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blueBall.BackgroundImage")));
+            this.blueBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blueBall.Location = new System.Drawing.Point(383, 208);
+            this.blueBall.Name = "blueBall";
+            this.blueBall.Size = new System.Drawing.Size(35, 35);
+            this.blueBall.TabIndex = 12;
+            this.blueBall.TabStop = false;
+            this.blueBall.Tag = "blueBall";
             // 
-            // pictureBox3
+            // greenBall
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(297, 71);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "redBall";
+            this.greenBall.BackColor = System.Drawing.Color.Transparent;
+            this.greenBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("greenBall.BackgroundImage")));
+            this.greenBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.greenBall.Location = new System.Drawing.Point(436, 286);
+            this.greenBall.Name = "greenBall";
+            this.greenBall.Size = new System.Drawing.Size(35, 35);
+            this.greenBall.TabIndex = 13;
+            this.greenBall.TabStop = false;
+            this.greenBall.Tag = "greenBall";
             // 
             // Form8
             // 
@@ -134,10 +134,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Red);
+            this.Controls.Add(this.greenBall);
+            this.Controls.Add(this.blueBall);
+            this.Controls.Add(this.yellowBall);
+            this.Controls.Add(this.redBall);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.btnVoler2);
             this.DoubleBuffered = true;
@@ -147,10 +147,10 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form8_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form8_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Red)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yellowBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenBall)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,9 +160,9 @@
         private System.Windows.Forms.Button btnVoler2;
         private System.Windows.Forms.Timer moveTimer;
         private System.Windows.Forms.PictureBox Player;
-        private System.Windows.Forms.PictureBox Red;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox redBall;
+        private System.Windows.Forms.PictureBox yellowBall;
+        private System.Windows.Forms.PictureBox blueBall;
+        private System.Windows.Forms.PictureBox greenBall;
     }
 }

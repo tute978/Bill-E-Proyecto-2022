@@ -25,7 +25,6 @@ C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bil
 C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form4.resources
 C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form5.resources
 C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form6.resources
-C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form7.resources
 C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form8.resources
 C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Properties.Resources.resources
 C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.GenerateResource.cache
@@ -49,3 +48,4 @@ C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Pro
 C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.CoreCompileInputs.cache
 C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.exe
 C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.yellowBall.resources

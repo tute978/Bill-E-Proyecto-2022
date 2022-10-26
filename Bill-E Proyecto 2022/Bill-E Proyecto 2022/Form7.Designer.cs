@@ -1,6 +1,6 @@
 ﻿namespace Bill_E_Proyecto_2022
 {
-    partial class Form7
+    partial class yellowBall
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(yellowBall));
             this.btnVoler2 = new System.Windows.Forms.Button();
             this.PBLaberinto = new System.Windows.Forms.PictureBox();
             this.moveTimer = new System.Windows.Forms.Timer(this.components);
@@ -71,7 +71,7 @@
             this.moveTimer.Interval = 1;
             this.moveTimer.Tick += new System.EventHandler(this.EventoMoveTimer);
             // 
-            // Form7
+            // yellowBall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +82,8 @@
             this.Controls.Add(this.btnVoler2);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
-            this.Name = "Form7";
+            this.Name = "yellowBall";
+            this.Tag = "yellowBall";
             this.Text = "Form7";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form7_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form7_KeyUp);

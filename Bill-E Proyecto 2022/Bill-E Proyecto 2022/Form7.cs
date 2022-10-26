@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Bill_E_Proyecto_2022
 {
-    public partial class Form7 : Form
+    public partial class yellowBall : Form
     {
         GeneralButton volver;
         bool moveRight, moveLeft, moveUp, moveDown;
         int velocidad = 1;
-        public Form7()
+        public yellowBall()
         {
             InitializeComponent();
             volver = new GeneralButton(btnVoler2);
