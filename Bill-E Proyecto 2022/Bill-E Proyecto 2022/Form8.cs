@@ -12,6 +12,10 @@ namespace Bill_E_Proyecto_2022
         bool moveRight, moveLeft, moveUp, moveDown;
         int velocidad = 3;
 
+        string color;
+        int vida = 3;
+        bool excLife = false;
+
         ArrayList ball = new ArrayList();
 
         Random rand = new Random();
@@ -21,7 +25,13 @@ namespace Bill_E_Proyecto_2022
             InitializeComponent();
             volver = new GeneralButton(btnVoler2);
 
+            PauseScreen p = new PauseScreen(this, 300, 300, 35);
+            p.setVisible(false);
+            p.setImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Menú Pausa.png");
+            p.replayImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Pantalla de carga programa.png");
+
             generateBalls(20);
+            color = setColor();
         }
 
         private void BtnVoler2_Click(object sender, EventArgs e)
@@ -105,6 +115,10 @@ namespace Bill_E_Proyecto_2022
                 {
                     removeBall((PictureBox)x);
                     ballCollisions((PictureBox)x);
+                }
+                else if(x == bar)
+                {
+                    //x.Width--;
                 }
             }
 
@@ -230,15 +244,26 @@ namespace Bill_E_Proyecto_2022
 
         private void removeBall(PictureBox x)
         {
+
             if (Player.Bounds.IntersectsWith(x.Bounds))
             {
                 ball.Add((PictureBox)x);
+
+                if (!excLife && color != (string)x.Tag  && x.Visible)
+                {
+                    vida--;
+                    checkLife();
+                    excLife = true;
+                }
             }
 
-            if (x.Width == 0 && x.Height == 0)
+            if (x.Width == 0 && x.Height == 0 && x.Visible == true)
             {
                 ball.Remove(x);
                 x.Visible = false;
+                excLife = false;
+                color = setColor();
+                Console.WriteLine("color: " + color);
             }
             else if (ball.Contains(x))
             {
@@ -249,6 +274,78 @@ namespace Bill_E_Proyecto_2022
                         setPicSize((PictureBox)x, 10);
                     }
                 }
+            }
+        }
+
+        private string setColor()
+        {
+            bool colorFound = false;
+            string prevColor = "";
+            List<String> tags = new List<string>();
+
+            tags.Add("redBall");
+            tags.Add("blueBall");
+            tags.Add("yellowBall");
+            tags.Add("greenBall");
+
+            while (!colorFound)
+            {
+                colorFound = true;
+                int r = rand.Next(0, 4);
+
+                switch (r)
+                {
+                    case 0:
+                        prevColor = "redBall";
+                        break;
+
+                    case 1:
+                        prevColor = "blueBall";
+                        break;
+
+                    case 2:
+                        prevColor = "yellowBall";
+                        break;
+
+                    case 3:
+                        prevColor = "greenBall";
+                        break;
+                }
+
+                for (int i = 0; i < tags.Count; i++)
+                {
+                    foreach (Control p in this.Controls)
+                    {
+                        if (p is PictureBox && (string)p.Tag == tags[i] && p.Visible == true)
+                        {
+                            colorFound = false;
+                            if (prevColor.Equals(tags[i]))
+                            {
+                                return prevColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return "";
+        }
+
+        private void checkLife()
+        {
+            switch (vida)
+            {
+                case 0:
+                    Heart.Visible = false;
+                    break;
+
+                case 1:
+                    Heart1.Visible = false;
+                    break;
+
+                case 2:
+                    Heart2.Visible = false;
+                    break;
             }
         }
     }

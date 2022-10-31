@@ -33,15 +33,15 @@
             this.btnVoler2 = new System.Windows.Forms.Button();
             this.moveTimer = new System.Windows.Forms.Timer(this.components);
             this.Player = new System.Windows.Forms.PictureBox();
-            this.redBall = new System.Windows.Forms.PictureBox();
-            this.yellowBall = new System.Windows.Forms.PictureBox();
-            this.blueBall = new System.Windows.Forms.PictureBox();
-            this.greenBall = new System.Windows.Forms.PictureBox();
+            this.Heart = new System.Windows.Forms.PictureBox();
+            this.Heart1 = new System.Windows.Forms.PictureBox();
+            this.Heart2 = new System.Windows.Forms.PictureBox();
+            this.bar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redBall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yellowBall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueBall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greenBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoler2
@@ -73,59 +73,60 @@
             this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Player.Location = new System.Drawing.Point(117, 171);
+            this.Player.Location = new System.Drawing.Point(29, 202);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(60, 60);
             this.Player.TabIndex = 7;
             this.Player.TabStop = false;
             // 
-            // redBall
+            // Heart
             // 
-            this.redBall.BackColor = System.Drawing.Color.Transparent;
-            this.redBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redBall.BackgroundImage")));
-            this.redBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.redBall.Location = new System.Drawing.Point(383, 286);
-            this.redBall.Name = "redBall";
-            this.redBall.Size = new System.Drawing.Size(35, 35);
-            this.redBall.TabIndex = 8;
-            this.redBall.TabStop = false;
-            this.redBall.Tag = "redBall";
+            this.Heart.BackColor = System.Drawing.Color.Transparent;
+            this.Heart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Heart.BackgroundImage")));
+            this.Heart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Heart.Location = new System.Drawing.Point(10, 10);
+            this.Heart.Name = "Heart";
+            this.Heart.Size = new System.Drawing.Size(30, 30);
+            this.Heart.TabIndex = 8;
+            this.Heart.TabStop = false;
+            this.Heart.Tag = "life";
             // 
-            // yellowBall
+            // Heart1
             // 
-            this.yellowBall.BackColor = System.Drawing.Color.Transparent;
-            this.yellowBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("yellowBall.BackgroundImage")));
-            this.yellowBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.yellowBall.Location = new System.Drawing.Point(436, 208);
-            this.yellowBall.Name = "yellowBall";
-            this.yellowBall.Size = new System.Drawing.Size(35, 35);
-            this.yellowBall.TabIndex = 10;
-            this.yellowBall.TabStop = false;
-            this.yellowBall.Tag = "yellowBall";
+            this.Heart1.BackColor = System.Drawing.Color.Transparent;
+            this.Heart1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Heart1.BackgroundImage")));
+            this.Heart1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Heart1.Location = new System.Drawing.Point(41, 10);
+            this.Heart1.Name = "Heart1";
+            this.Heart1.Size = new System.Drawing.Size(30, 30);
+            this.Heart1.TabIndex = 9;
+            this.Heart1.TabStop = false;
+            this.Heart1.Tag = "life";
             // 
-            // blueBall
+            // Heart2
             // 
-            this.blueBall.BackColor = System.Drawing.Color.Transparent;
-            this.blueBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blueBall.BackgroundImage")));
-            this.blueBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.blueBall.Location = new System.Drawing.Point(383, 208);
-            this.blueBall.Name = "blueBall";
-            this.blueBall.Size = new System.Drawing.Size(35, 35);
-            this.blueBall.TabIndex = 12;
-            this.blueBall.TabStop = false;
-            this.blueBall.Tag = "blueBall";
+            this.Heart2.BackColor = System.Drawing.Color.Transparent;
+            this.Heart2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Heart2.BackgroundImage")));
+            this.Heart2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Heart2.Location = new System.Drawing.Point(72, 10);
+            this.Heart2.Name = "Heart2";
+            this.Heart2.Size = new System.Drawing.Size(30, 30);
+            this.Heart2.TabIndex = 10;
+            this.Heart2.TabStop = false;
+            this.Heart2.Tag = "life";
             // 
-            // greenBall
+            // bar
             // 
-            this.greenBall.BackColor = System.Drawing.Color.Transparent;
-            this.greenBall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("greenBall.BackgroundImage")));
-            this.greenBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.greenBall.Location = new System.Drawing.Point(436, 286);
-            this.greenBall.Name = "greenBall";
-            this.greenBall.Size = new System.Drawing.Size(35, 35);
-            this.greenBall.TabIndex = 13;
-            this.greenBall.TabStop = false;
-            this.greenBall.Tag = "greenBall";
+            this.bar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bar.BackColor = System.Drawing.Color.Transparent;
+            this.bar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bar.BackgroundImage")));
+            this.bar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bar.Location = new System.Drawing.Point(281, 29);
+            this.bar.Name = "bar";
+            this.bar.Size = new System.Drawing.Size(281, 17);
+            this.bar.TabIndex = 12;
+            this.bar.TabStop = false;
             // 
             // Form8
             // 
@@ -134,10 +135,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.greenBall);
-            this.Controls.Add(this.blueBall);
-            this.Controls.Add(this.yellowBall);
-            this.Controls.Add(this.redBall);
+            this.Controls.Add(this.bar);
+            this.Controls.Add(this.Heart2);
+            this.Controls.Add(this.Heart1);
+            this.Controls.Add(this.Heart);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.btnVoler2);
             this.DoubleBuffered = true;
@@ -147,10 +148,10 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form8_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form8_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redBall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yellowBall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueBall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greenBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,9 +161,9 @@
         private System.Windows.Forms.Button btnVoler2;
         private System.Windows.Forms.Timer moveTimer;
         private System.Windows.Forms.PictureBox Player;
-        private System.Windows.Forms.PictureBox redBall;
-        private System.Windows.Forms.PictureBox yellowBall;
-        private System.Windows.Forms.PictureBox blueBall;
-        private System.Windows.Forms.PictureBox greenBall;
+        private System.Windows.Forms.PictureBox Heart;
+        private System.Windows.Forms.PictureBox Heart1;
+        private System.Windows.Forms.PictureBox Heart2;
+        private System.Windows.Forms.PictureBox bar;
     }
 }
