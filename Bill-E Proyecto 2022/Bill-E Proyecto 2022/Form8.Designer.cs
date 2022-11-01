@@ -37,6 +37,7 @@
             this.Heart1 = new System.Windows.Forms.PictureBox();
             this.Heart2 = new System.Windows.Forms.PictureBox();
             this.bar = new System.Windows.Forms.PictureBox();
+            this.gameTick = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart1)).BeginInit();
@@ -122,11 +123,17 @@
             this.bar.BackColor = System.Drawing.Color.Transparent;
             this.bar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bar.BackgroundImage")));
             this.bar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bar.Location = new System.Drawing.Point(281, 29);
+            this.bar.Location = new System.Drawing.Point(282, 29);
             this.bar.Name = "bar";
-            this.bar.Size = new System.Drawing.Size(281, 17);
+            this.bar.Size = new System.Drawing.Size(279, 17);
             this.bar.TabIndex = 12;
             this.bar.TabStop = false;
+            // 
+            // gameTick
+            // 
+            this.gameTick.Enabled = true;
+            this.gameTick.Interval = 1;
+            this.gameTick.Tick += new System.EventHandler(this.GameTick_Tick);
             // 
             // Form8
             // 
@@ -165,5 +172,6 @@
         private System.Windows.Forms.PictureBox Heart1;
         private System.Windows.Forms.PictureBox Heart2;
         private System.Windows.Forms.PictureBox bar;
+        private System.Windows.Forms.Timer gameTick;
     }
 }

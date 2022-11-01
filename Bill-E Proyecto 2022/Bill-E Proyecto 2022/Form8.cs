@@ -15,6 +15,9 @@ namespace Bill_E_Proyecto_2022
         string color;
         int vida = 3;
         bool excLife = false;
+        int lifecooldown = 5;
+
+        int tWidth;
 
         ArrayList ball = new ArrayList();
 
@@ -24,6 +27,8 @@ namespace Bill_E_Proyecto_2022
         {
             InitializeComponent();
             volver = new GeneralButton(btnVoler2);
+
+            tWidth = bar.Width;
 
             PauseScreen p = new PauseScreen(this, 300, 300, 35);
             p.setVisible(false);
@@ -36,9 +41,9 @@ namespace Bill_E_Proyecto_2022
 
         private void BtnVoler2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form6 Contrarreloj = new Form6();
             Contrarreloj.Show();
+            this.Close();
         }
 
         private void BtnVolver_MouseEnter(object sender, EventArgs e)
@@ -91,14 +96,14 @@ namespace Bill_E_Proyecto_2022
             }
         }
 
-        private void EventoMoveTimer(object sender, EventArgs e)
+        private void GameTick_Tick(object sender, EventArgs e)
         {
             //Hitbox Programe
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "redBall")
                 {
-                    removeBall((PictureBox) x);
+                    removeBall((PictureBox)x);
                     ballCollisions((PictureBox)x);
                 }
                 else if (x is PictureBox && (string)x.Tag == "yellowBall")
@@ -116,12 +121,20 @@ namespace Bill_E_Proyecto_2022
                     removeBall((PictureBox)x);
                     ballCollisions((PictureBox)x);
                 }
-                else if(x == bar)
+                else if (x == bar)
                 {
-                    //x.Width--;
+                    executeTimer(false);
                 }
             }
 
+            if (lifecooldown > 0)
+            {
+                lifecooldown--;
+            }
+        }
+
+        private void EventoMoveTimer(object sender, EventArgs e)
+        {
             if (moveLeft == true && Player.Left > 0)
             {
                 Player.Left -= velocidad;
@@ -130,7 +143,7 @@ namespace Bill_E_Proyecto_2022
             {
                 Player.Left += velocidad;
             }
-            if (moveUp == true && Player.Top > 0)
+            if (moveUp == true && Player.Top > 60)
             {
                 Player.Top -= velocidad;
             }
@@ -138,7 +151,6 @@ namespace Bill_E_Proyecto_2022
             {
                 Player.Top += velocidad;
             }
-
             //---------------------------------------------------------------------------------------------
         }
 
@@ -154,7 +166,7 @@ namespace Bill_E_Proyecto_2022
             picBall.BackgroundImageLayout = ImageLayout.Stretch;
 
             int x = rand.Next(10, this.ClientSize.Width - picBall.Width);
-            int y = rand.Next(10, this.ClientSize.Height - picBall.Height);
+            int y = rand.Next(60, this.ClientSize.Height - picBall.Height);
             picBall.Location = new Point(x, y);
 
             switch (type)
@@ -222,12 +234,12 @@ namespace Bill_E_Proyecto_2022
                 {
                     if (p != x)
                     {
-                        if (p is PictureBox && (string)p.Tag == tags[i])
+                        if (p is PictureBox && (string)p.Tag == tags[i] || p is PictureBox && p == Player)
                         {
                             if (x.Bounds.IntersectsWith(p.Bounds))
                             {
                                 int x1 = rand.Next(10, this.ClientSize.Width - x.Width);
-                                int y = rand.Next(10, this.ClientSize.Height - x.Height);
+                                int y = rand.Next(60, this.ClientSize.Height - x.Height);
                                 x.Location = new Point(x1, y);
                             }
                         }
@@ -244,34 +256,41 @@ namespace Bill_E_Proyecto_2022
 
         private void removeBall(PictureBox x)
         {
-
-            if (Player.Bounds.IntersectsWith(x.Bounds))
+            if (lifecooldown <= 0)
             {
-                ball.Add((PictureBox)x);
-
-                if (!excLife && color != (string)x.Tag  && x.Visible)
+                if (Player.Bounds.IntersectsWith(x.Bounds))
                 {
-                    vida--;
-                    checkLife();
-                    excLife = true;
-                }
-            }
+                    ball.Add((PictureBox)x);
 
-            if (x.Width == 0 && x.Height == 0 && x.Visible == true)
-            {
-                ball.Remove(x);
-                x.Visible = false;
-                excLife = false;
-                color = setColor();
-                Console.WriteLine("color: " + color);
-            }
-            else if (ball.Contains(x))
-            {
-                for (int i = 0; i < ball.Count; i++)
-                {
-                    if (ball[i] == x)
+                    if (!excLife && color != (string)x.Tag && x.Visible)
                     {
-                        setPicSize((PictureBox)x, 10);
+                        vida--;
+                        checkLife();
+                        excLife = true;
+                    }
+                    else if (!excLife && color == (string)x.Tag && x.Visible)
+                    {
+                        executeTimer(true);
+                        excLife = true;
+                    }
+                }
+                //every  ball that is delete
+                if (x.Width == 0 && x.Height == 0 && x.Visible == true)
+                {
+                    ball.Remove(x);
+                    x.Visible = false;
+                    excLife = false;
+                    color = setColor();
+                    Console.WriteLine("color: " + color);
+                }
+                else if (ball.Contains(x))
+                {
+                    for (int i = 0; i < ball.Count; i++)
+                    {
+                        if (ball[i] == x)
+                        {
+                            setPicSize((PictureBox)x, 10);
+                        }
                     }
                 }
             }
@@ -346,6 +365,24 @@ namespace Bill_E_Proyecto_2022
                 case 2:
                     Heart2.Visible = false;
                     break;
+            }
+        }
+
+        private void executeTimer(bool reset)
+        {
+            if (!reset) {
+                if (bar.Width > 0)
+                {
+                    bar.Width -= 2;
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                bar.Width = tWidth;
             }
         }
     }

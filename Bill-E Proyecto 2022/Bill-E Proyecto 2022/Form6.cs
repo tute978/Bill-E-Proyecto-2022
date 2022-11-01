@@ -23,9 +23,9 @@ namespace Bill_E_Proyecto_2022
 
         private void BtnIniciar2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form8 ContrarrelojJuego = new Form8();
             ContrarrelojJuego.Show();
+            this.Close();
         }
 
         private void BtnVolver_MouseEnter(object sender, EventArgs e)
@@ -54,9 +54,9 @@ namespace Bill_E_Proyecto_2022
 
         private void BtnVoler2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form4 Juegos = new Form4();
             Juegos.Show();
+            this.Close();
         }
     }
 }
