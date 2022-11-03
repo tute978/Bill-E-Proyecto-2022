@@ -9,6 +9,11 @@ namespace Bill_E_Proyecto_2022
     public partial class Form8 : Form
     {
         GeneralButton volver;
+
+        PauseScreen p;
+        PauseScreen lose;
+        PauseScreen win;
+
         bool moveRight, moveLeft, moveUp, moveDown;
         int velocidad = 3;
 
@@ -16,6 +21,8 @@ namespace Bill_E_Proyecto_2022
         int vida = 3;
         bool excLife = false;
         int lifecooldown = 5;
+
+        int time = 0;
 
         int tWidth;
 
@@ -27,23 +34,22 @@ namespace Bill_E_Proyecto_2022
         {
             InitializeComponent();
             volver = new GeneralButton(btnVoler2);
+            p = new PauseScreen(this, 300, 300, 60);
+            lose = new PauseScreen(this, 300, 400, 60);
+            win = new PauseScreen(this, 300, 400, 60);
 
             tWidth = bar.Width;
 
-            PauseScreen p = new PauseScreen(this, 300, 300, 35);
-            p.setVisible(false);
-            p.setImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Menú Pausa.png");
-            p.replayImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Pantalla de carga programa.png");
-
+            pauseConfig();
+            loseConfig();
+            winConfig();
             generateBalls(20);
-            color = setColor();
         }
 
         private void BtnVoler2_Click(object sender, EventArgs e)
         {
-            Form6 Contrarreloj = new Form6();
-            Contrarreloj.Show();
-            this.Close();
+            PauseScreen.stop = true;
+            p.setVisible(true);
         }
 
         private void BtnVolver_MouseEnter(object sender, EventArgs e)
@@ -94,65 +100,104 @@ namespace Bill_E_Proyecto_2022
             {
                 moveDown = false;
             }
+            if(e.KeyCode == Keys.Escape)
+            {
+                if (!PauseScreen.stop)
+                {
+                    PauseScreen.stop = true;
+                    p.setVisible(true);
+                }
+                else
+                {
+                    PauseScreen.stop = false;
+                    p.setVisible(false);
+                }
+            }
         }
 
         private void GameTick_Tick(object sender, EventArgs e)
         {
-            //Hitbox Programe
-            foreach (Control x in this.Controls)
+            if (!PauseScreen.stop)
             {
-                if (x is PictureBox && (string)x.Tag == "redBall")
+                foreach (Control x in this.Controls)
                 {
-                    removeBall((PictureBox)x);
-                    ballCollisions((PictureBox)x);
+                    if (x is PictureBox && (string)x.Tag == "redBall")
+                    {
+                        removeBall((PictureBox)x);
+                        ballCollisions((PictureBox)x);
+                    }
+                    else if (x is PictureBox && (string)x.Tag == "yellowBall")
+                    {
+                        removeBall((PictureBox)x);
+                        ballCollisions((PictureBox)x);
+                    }
+                    else if (x is PictureBox && (string)x.Tag == "blueBall")
+                    {
+                        removeBall((PictureBox)x);
+                        ballCollisions((PictureBox)x);
+                    }
+                    else if (x is PictureBox && (string)x.Tag == "greenBall")
+                    {
+                        removeBall((PictureBox)x);
+                        ballCollisions((PictureBox)x);
+                    }
+                    else if (x is PictureBox && x == bar)
+                    {
+                        executeTimer(false);
+                    }
                 }
-                else if (x is PictureBox && (string)x.Tag == "yellowBall")
-                {
-                    removeBall((PictureBox)x);
-                    ballCollisions((PictureBox)x);
-                }
-                else if (x is PictureBox && (string)x.Tag == "blueBall")
-                {
-                    removeBall((PictureBox)x);
-                    ballCollisions((PictureBox)x);
-                }
-                else if (x is PictureBox && (string)x.Tag == "greenBall")
-                {
-                    removeBall((PictureBox)x);
-                    ballCollisions((PictureBox)x);
-                }
-                else if (x == bar)
-                {
-                    executeTimer(false);
-                }
-            }
 
-            if (lifecooldown > 0)
-            {
-                lifecooldown--;
+                if (lifecooldown > 0)
+                {
+                    lifecooldown--;
+                }
+                if (lifecooldown == 1)
+                {
+                    color = setColor();
+                }
+                checkColor();
             }
         }
 
         private void EventoMoveTimer(object sender, EventArgs e)
         {
-            if (moveLeft == true && Player.Left > 0)
+            if (!PauseScreen.stop)
             {
-                Player.Left -= velocidad;
+                foreach (Control x in this.Controls)
+                {
+                    if (x is PictureBox && x == CContenedor)
+                    {
+                        contenedorcColisions((PictureBox)x);
+                    }
+                }
+
+                if (moveLeft == true && Player.Left > 0)
+                {
+                    Player.Left -= velocidad;
+                }
+                if (moveRight == true && Player.Left < (ClientSize.Width - Player.Width))
+                {
+                    Player.Left += velocidad;
+                }
+                if (moveUp == true && Player.Top > 60)
+                {
+                    Player.Top -= velocidad;
+                }
+                if (moveDown == true && Player.Top < (ClientSize.Height - Player.Height))
+                {
+                    Player.Top += velocidad;
+                }
             }
-            if (moveRight == true && Player.Left < 739)
-            {
-                Player.Left += velocidad;
-            }
-            if (moveUp == true && Player.Top > 60)
-            {
-                Player.Top -= velocidad;
-            }
-            if (moveDown == true && Player.Top < 390)
-            {
-                Player.Top += velocidad;
-            }
-            //---------------------------------------------------------------------------------------------
         }
+
+        private void Contador_Tick(object sender, EventArgs e)
+        {
+            if (!PauseScreen.stop)
+            {
+                time++;
+            }
+        }
+//-----------------------------------------------------------------------------------------------------------------
 
         private void createBall(String type)
         {
@@ -234,7 +279,7 @@ namespace Bill_E_Proyecto_2022
                 {
                     if (p != x)
                     {
-                        if (p is PictureBox && (string)p.Tag == tags[i] || p is PictureBox && p == Player)
+                        if (p is PictureBox && (string)p.Tag == tags[i] || p is PictureBox && p == Player || p is PictureBox && p == CContenedor)
                         {
                             if (x.Bounds.IntersectsWith(p.Bounds))
                             {
@@ -281,7 +326,6 @@ namespace Bill_E_Proyecto_2022
                     x.Visible = false;
                     excLife = false;
                     color = setColor();
-                    Console.WriteLine("color: " + color);
                 }
                 else if (ball.Contains(x))
                 {
@@ -347,6 +391,9 @@ namespace Bill_E_Proyecto_2022
                 }
             }
 
+            PauseScreen.stop = true;
+            win.setTime(time);
+            win.setVisible(true);
             return "";
         }
 
@@ -356,6 +403,8 @@ namespace Bill_E_Proyecto_2022
             {
                 case 0:
                     Heart.Visible = false;
+                    PauseScreen.stop = true;
+                    lose.setVisible(true);
                     break;
 
                 case 1:
@@ -373,17 +422,92 @@ namespace Bill_E_Proyecto_2022
             if (!reset) {
                 if (bar.Width > 0)
                 {
-                    bar.Width -= 2;
+                    bar.Width--;
                 }
                 else
                 {
-
+                    PauseScreen.stop = true;
+                    lose.setVisible(true);
                 }
             }
             else
             {
                 bar.Width = tWidth;
             }
+        }
+
+        private void checkColor()
+        {
+            switch (color)
+            {
+                case "redBall": DColor.BackColor = Color.Red;
+                    break;
+
+                case "blueBall": DColor.BackColor = Color.Blue;
+                    break;
+
+                case "yellowBall": DColor.BackColor = Color.Yellow;
+                    break;
+
+                case "greenBall": DColor.BackColor = Color.Lime;
+                    break;
+            }
+        }
+
+        private void contenedorcColisions(PictureBox x)
+        {
+            //Makes the player unable to move to a certain direction inside the cube.
+            //                  | Defines the left perimeter |       Defines the top perimeter       |    Defines the down perimeter    | Defines the Right Perimeter |
+            if ((x.Left - Player.Right) < 1 && (x.Top - Player.Top) < (Player.Height - 4) && (Player.Top - x.Top) < (x.Height - 4) && (Player.Left + 2) < x.Right)
+            {
+                moveRight = false;
+            }
+            if ((Player.Left - x.Right) < 1 && (x.Top - Player.Top) < (Player.Height - 4) && (Player.Top - x.Top) < (x.Height - 4) && (x.Left + 2) < Player.Right)
+            {
+                moveLeft = false;
+            }
+            if ((x.Top - Player.Top) < (Player.Height + 4) && (x.Left + 2) < Player.Right && (Player.Left + 2) < x.Right && (Player.Top - x.Top) < (x.Height - 2))
+            {
+                moveDown = false;
+            }
+            if ((Player.Top - x.Top) < (x.Height + 4) && (x.Left + 2) < Player.Right && (Player.Left + 2) < x.Right && (x.Top - Player.Top) < (Player.Height - 2))
+            {
+                moveUp = false;
+            }
+        }
+
+        //------------------------------------------------------------------------------------------------------
+        private void pauseConfig()
+        {
+            p.setVisible(false);
+            p.setImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Menú Pausa.png");
+            p.replayImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            p.menuImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            p.gamesImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            p.useResume(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Pantalla de carga programa.png");
+            p.useEscape();
+            p.setLocation(15, ((lose.getHeight() / 2) - (lose.getBHeight() / 2)) - 20);
+        }
+
+        private void loseConfig()
+        {
+            lose.setVisible(false);
+            lose.setImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Pantalla Perdiste broderrr.png");
+            lose.replayImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            lose.menuImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            lose.gamesImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            lose.setLocation(70, ((lose.getHeight() / 2) - (lose.getBHeight() / 2)) + 65);
+        }
+
+        private void winConfig()
+        {
+            win.setVisible(false);
+            win.setImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Pantañña gg you win.png");
+            win.replayImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            win.menuImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            win.gamesImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
+            win.setLocation(70, ((lose.getHeight() / 2) - (lose.getBHeight() / 2)) + 65);
+            win.useTime(15);
         }
     }
 }

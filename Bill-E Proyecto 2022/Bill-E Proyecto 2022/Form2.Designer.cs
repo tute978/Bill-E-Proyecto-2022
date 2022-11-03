@@ -36,6 +36,7 @@
             // 
             // btnJugar
             // 
+            this.btnJugar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnJugar.BackColor = System.Drawing.Color.Transparent;
             this.btnJugar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnJugar.BackgroundImage")));
             this.btnJugar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

@@ -38,15 +38,21 @@
             this.Heart2 = new System.Windows.Forms.PictureBox();
             this.bar = new System.Windows.Forms.PictureBox();
             this.gameTick = new System.Windows.Forms.Timer(this.components);
+            this.CContenedor = new System.Windows.Forms.PictureBox();
+            this.DColor = new System.Windows.Forms.PictureBox();
+            this.Contador = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CContenedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DColor)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoler2
             // 
+            this.btnVoler2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVoler2.BackColor = System.Drawing.Color.Transparent;
             this.btnVoler2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoler2.BackgroundImage")));
             this.btnVoler2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -54,9 +60,9 @@
             this.btnVoler2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnVoler2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnVoler2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoler2.Location = new System.Drawing.Point(718, 5);
+            this.btnVoler2.Location = new System.Drawing.Point(751, 12);
             this.btnVoler2.Name = "btnVoler2";
-            this.btnVoler2.Size = new System.Drawing.Size(75, 67);
+            this.btnVoler2.Size = new System.Drawing.Size(37, 41);
             this.btnVoler2.TabIndex = 6;
             this.btnVoler2.UseVisualStyleBackColor = false;
             this.btnVoler2.Click += new System.EventHandler(this.BtnVoler2_Click);
@@ -135,6 +141,34 @@
             this.gameTick.Interval = 1;
             this.gameTick.Tick += new System.EventHandler(this.GameTick_Tick);
             // 
+            // CContenedor
+            // 
+            this.CContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.CContenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CContenedor.BackgroundImage")));
+            this.CContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CContenedor.Location = new System.Drawing.Point(4, 395);
+            this.CContenedor.Name = "CContenedor";
+            this.CContenedor.Size = new System.Drawing.Size(122, 53);
+            this.CContenedor.TabIndex = 13;
+            this.CContenedor.TabStop = false;
+            this.CContenedor.Tag = "";
+            // 
+            // DColor
+            // 
+            this.DColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DColor.Location = new System.Drawing.Point(72, 407);
+            this.DColor.Name = "DColor";
+            this.DColor.Size = new System.Drawing.Size(41, 25);
+            this.DColor.TabIndex = 14;
+            this.DColor.TabStop = false;
+            // 
+            // Contador
+            // 
+            this.Contador.Enabled = true;
+            this.Contador.Interval = 1000;
+            this.Contador.Tick += new System.EventHandler(this.Contador_Tick);
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +176,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DColor);
+            this.Controls.Add(this.CContenedor);
             this.Controls.Add(this.bar);
             this.Controls.Add(this.Heart2);
             this.Controls.Add(this.Heart1);
@@ -151,6 +187,7 @@
             this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.Name = "Form8";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form8";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form8_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form8_KeyUp);
@@ -159,6 +196,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Heart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CContenedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DColor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,5 +212,8 @@
         private System.Windows.Forms.PictureBox Heart2;
         private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.Timer gameTick;
+        private System.Windows.Forms.PictureBox CContenedor;
+        private System.Windows.Forms.PictureBox DColor;
+        private System.Windows.Forms.Timer Contador;
     }
 }

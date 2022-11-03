@@ -11,23 +11,26 @@ namespace Bill_E_Proyecto_2022
     class PauseScreen
     {
         Form form;
+        Form backScreen = new Form();
 
-        PictureBox backScreen = new PictureBox();
         Button replay = new Button();
         Button menu = new Button();
         Button games = new Button();
+        Button resume = new Button();
+
+        Label time = new Label();
 
         GeneralButton r;
         GeneralButton m;
         GeneralButton g;
+        GeneralButton res;
+
+        public static bool stop = false;
+        bool useEsc = false;
 
         public PauseScreen(Form form, int h, int w, int bSize)
         {
             this.form = form;
-            r = new GeneralButton(replay);
-            m = new GeneralButton(menu);
-            g = new GeneralButton(games);
-
             backConfig();
             setHeight(h);
             setWidth(w);
@@ -35,14 +38,21 @@ namespace Bill_E_Proyecto_2022
             buttonSize(bSize);
             buttonConfig();
 
-            setLocation();
             addControls();
         }
 
         private void backConfig()
         {
-            backScreen.BackColor = Color.Transparent;
+            backScreen.BackColor = Color.Lime;
+            backScreen.TransparencyKey = Color.Lime;
+
             backScreen.BackgroundImageLayout = ImageLayout.Stretch;
+            backScreen.StartPosition = FormStartPosition.CenterScreen;
+            backScreen.FormBorderStyle = FormBorderStyle.None;
+            backScreen.KeyPreview = true;
+            backScreen.TopMost = true;
+            backScreen.KeyUp += KeyDown;
+
         }
 
         private void setWidth(int value)
@@ -55,17 +65,15 @@ namespace Bill_E_Proyecto_2022
             backScreen.Height = value;
         }
 
-        public void setLocation()
+        public void setLocation(int space, int y)
         {
-            int x = (form.Width / 2) - (backScreen.Width / 2);
-            int y = (form.Height / 2) - (backScreen.Height / 2);
+            replay.Location = new Point(space, y);
+            menu.Location = new Point((backScreen.ClientSize.Width / 2) - (menu.Width / 2), y);
+            games.Location = new Point((backScreen.ClientSize.Width - games.Width) - space, y);
 
-            backScreen.Location = new Point(x, y);
-
-            int bx = backScreen.Left;
-            int by = (form.Height / 2) - (replay.Height / 2);
-
-            replay.Location = new Point(bx - (replay.Width), 0);
+            r = new GeneralButton(replay);
+            m = new GeneralButton(menu);
+            g = new GeneralButton(games);
         }
 
         public void setImage(String file)
@@ -101,6 +109,10 @@ namespace Bill_E_Proyecto_2022
             menu.BackColor = Color.Transparent;
             games.BackColor = Color.Transparent;
 
+            replay.FlatStyle = FlatStyle.Flat;
+            menu.FlatStyle = FlatStyle.Flat;
+            games.FlatStyle = FlatStyle.Flat;
+
             replay.FlatAppearance.BorderSize = 0;
             menu.FlatAppearance.BorderSize = 0;
             games.FlatAppearance.BorderSize = 0;
@@ -116,6 +128,18 @@ namespace Bill_E_Proyecto_2022
             replay.BackgroundImageLayout = ImageLayout.Stretch;
             menu.BackgroundImageLayout = ImageLayout.Stretch;
             games.BackgroundImageLayout = ImageLayout.Stretch;
+
+            replay.MouseEnter += MouseEnter;
+            menu.MouseEnter += MouseEnter;
+            games.MouseEnter += MouseEnter;
+
+            replay.MouseLeave += MouseLeave;
+            menu.MouseLeave += MouseLeave;
+            games.MouseLeave += MouseLeave;
+
+            replay.Click += ButtonClick;
+            menu.Click += ButtonClick;
+            games.Click += ButtonClick;
         }
 
         public void replayImage(String file)
@@ -133,27 +157,168 @@ namespace Bill_E_Proyecto_2022
             games.BackgroundImage = Image.FromFile(file);
         }
 
+        private void KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                if (stop && useEsc)
+                {
+                    backScreen.Visible = false;
+                    stop = false;
+                }
+            }
+        }
+
         private void MouseEnter(object sender, EventArgs e)
         {
-            r.setSize(4);
-            m.setSize(4);
-            g.setSize(4);
+            if((Button)sender == replay)
+            {
+                r.setSize(4);
+            }
+            else if ((Button)sender == menu)
+            {
+                m.setSize(4);
+            }
+            else if ((Button)sender == games)
+            {
+                g.setSize(4);
+            }
+            else if ((Button)sender == resume)
+            {
+                res.setSize(4);
+            }
         }
 
         private void MouseLeave(object sender, EventArgs e)
         {
-            r.setDefault();
-            m.setDefault();
-            g.setDefault();
+            if ((Button)sender == replay)
+            {
+                r.setDefault();
+            }
+            else if ((Button)sender == menu)
+            {
+                m.setDefault();
+            }
+            else if ((Button)sender == games)
+            {
+                g.setDefault();
+            }
+            else if ((Button)sender == resume)
+            {
+                res.setDefault();
+            }
+        }
+
+        private void ButtonClick(object sender, EventArgs e)
+        {
+            if ((Button)sender == replay)
+            {
+                Form ventana = new Form8();
+                ventana.Show();
+                form.Close();
+                stop = false;
+                backScreen.Close();
+            }
+            else if ((Button)sender == menu)
+            {
+                Form ventana = new Form2();
+                ventana.Show();
+                form.Close();
+                stop = false;
+                backScreen.Close();
+            }
+            else if ((Button)sender == games)
+            {
+                Form ventana = new Form4();
+                ventana.Show();
+                form.Close();
+                stop = false;
+                backScreen.Close();
+            }
+            else if ((Button)sender == resume)
+            {
+                stop = false;
+                backScreen.Visible = false;
+            }
+        }
+//-----------------------------------------------------------------------------------------------
+        public void useResume(String file)
+        {
+            resume.Width = (backScreen.Width / 3) * 2;
+            resume.Height = resume.Width / 3;
+
+            resume.BackColor = Color.Transparent;
+            resume.FlatStyle = FlatStyle.Flat;
+            resume.FlatAppearance.BorderSize = 0;
+            resume.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            resume.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            resume.BackgroundImageLayout = ImageLayout.Stretch;
+            resume.BackgroundImage = Image.FromFile(file);
+
+            resume.MouseEnter += MouseEnter;
+            resume.MouseLeave += MouseLeave;
+            resume.Click += ButtonClick;
+
+            resume.Location = new Point((backScreen.ClientSize.Width / 2) - (resume.Width / 2), (backScreen.ClientSize.Height - resume.Height) - 30);
+
+            res = new GeneralButton(resume);
+            backScreen.Controls.Add(resume);
+        }
+
+        public void useEscape()
+        {
+            useEsc = true;
+        }
+
+        public void useTime(int space)
+        {
+            time.BackColor = Color.Transparent;
+            time.FlatStyle = FlatStyle.Flat;
+            time.ForeColor = Color.White;
+            time.Font = new Font(Label.DefaultFont, FontStyle.Bold);
+            time.Width = backScreen.Width / 3;
+            time.Height = backScreen.Height / 10;
+
+            time.Location = new Point(space * 2, (backScreen.ClientSize.Height - time.Height) - space / 2);
+            time.Text = "Tu Tiempo: ";
+
+            backScreen.Controls.Add(time);
+        }
+
+        public void setTime(int value)
+        {
+            time.Text = "Tu Tiempo: " + value;
         }
 //-----------------------------------------------------------------------------------------
+
+        public int getWidth()
+        {
+            return backScreen.ClientSize.Width;
+        }
+
+        public int getHeight()
+        {
+            return backScreen.ClientSize.Height;
+        }
+
+        public int getBWidth()
+        {
+            return replay.Width;
+        }
+
+        public int getBHeight()
+        {
+            return replay.Height;
+        }
+        //-----------------------------------------------------------------------------------------
+
         private void addControls()
         {
-            form.Controls.Add(backScreen);
+            backScreen.Show();
 
-            form.Controls.Add(replay);
-            form.Controls.Add(menu);
-            form.Controls.Add(games);
+            backScreen.Controls.Add(replay);
+            backScreen.Controls.Add(menu);
+            backScreen.Controls.Add(games);
         }
     }
 }
