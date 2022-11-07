@@ -1,0 +1,74 @@
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe.config
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csprojAssemblyReference.cache
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form1.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form2.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Properties.Resources.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.GenerateResource.cache
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.CoreCompileInputs.cache
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.exe
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form3.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form4.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form5.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form6.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form7.resources
+C:\Users\47572115\source\repos\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form8.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe.config
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csprojAssemblyReference.cache
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form1.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form2.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form3.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form4.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form5.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form6.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form7.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form8.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Properties.Resources.resources
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.GenerateResource.cache
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.CoreCompileInputs.cache
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.exe
+C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe.config
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csprojAssemblyReference.cache
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form1.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form2.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form3.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form4.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form5.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form6.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form7.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form8.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Properties.Resources.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.GenerateResource.cache
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.CoreCompileInputs.cache
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.exe
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.pdb
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form9.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form10.resources
+C:\Users\47572115\Downloads\Bill-E-Proyecto-2022\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form11.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe.config
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.exe
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\bin\Debug\Bill-E Proyecto 2022.pdb
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csprojAssemblyReference.cache
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form1.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form10.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form11.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form2.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form3.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form4.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form5.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form6.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form7.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form8.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Form9.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill_E_Proyecto_2022.Properties.Resources.resources
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.GenerateResource.cache
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.csproj.CoreCompileInputs.cache
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.exe
+C:\Colegio\Proyecto\Bill-E Proyecto 2022\Bill-E Proyecto 2022\obj\Debug\Bill-E Proyecto 2022.pdb
