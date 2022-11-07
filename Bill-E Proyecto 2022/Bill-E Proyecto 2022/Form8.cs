@@ -506,7 +506,7 @@ namespace Bill_E_Proyecto_2022
             win.replayImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
             win.menuImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
             win.gamesImage(@"C:\Users\47338591\Documents\GitHub\Bill-E-Proyecto-2022\Imagenes\Botón Reiniciar.png");
-            win.setLocation(70, ((lose.getHeight() / 2) - (lose.getBHeight() / 2)) + 65);
+            win.setLocation(70, ((lose.getHeight() / 2) - (lose.getBHeight() / 2)) + 55);
             win.useTime(15);
         }
     }
